@@ -1,0 +1,20 @@
+# Use an official Python runtime as a parent image
+FROM python:3.11
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Clone the specific repository
+RUN git clone https://github.com/TingRubato/job-spy.git .
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r script/requirements.txt
+
+# Copy the .env file to the working directory
+COPY config/.env .
+
+# Define environment variable
+ENV PYTHONUNBUFFERED 1
+
+# Run main.py when the container launches
+CMD ["python", "./script/main.py"]
