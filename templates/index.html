@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Scraper</title>
+</head>
+<body>
+    <h1>Job Scraper</h1>
+    <form method="post" action="/runscript">
+        <label for="job_keywords">Job Keywords (comma-separated):</label><br>
+        <input type="text" id="job_keywords" name="job_keywords" placeholder="Software, Developer, Data Analyst"><br>
+
+        <label for="location_keywords">Location Keywords (comma-separated):</label><br>
+        <input type="text" id="location_keywords" name="location_keywords" placeholder="New York, Boston, Seattle"><br>
+
+        <input type="submit" value="Run Script">
+    </form>
+</body>
+</html>
